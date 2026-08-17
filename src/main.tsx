@@ -1,11 +1,21 @@
+import "@/styles/global.css";
+
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router";
+
+import GuestLayout from "@/pages/guest/layout";
+import HomePage from "@/pages/guest/home";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
-      <h1>Portfolio Starter</h1>
-      <p>Clean slate ready. We will build each piece step by step.</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* Guest Layout & Routes */}
+        <Route element={<GuestLayout />}>
+          <Route path="/" element={<HomePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </StrictMode>
 );

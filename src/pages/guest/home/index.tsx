@@ -15,7 +15,7 @@ export default function HomePage() {
         <AboutStorySection />
       </div>
 
-      {/* 3. Skills & Technologies */}
+      {/* 3. Skills & Technologies + Experience */}
       <SkillsSection />
     </>
   );

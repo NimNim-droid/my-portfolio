@@ -24,6 +24,19 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
+    title: "Enterprise & Odoo Development",
+    iconName: "Database",
+    skills: [
+      { name: "Odoo ERP", icon: "https://cdn.simpleicons.org/odoo/714B67" },
+      { name: "Odoo Studio" },
+      { name: "Python (Odoo ORM)", icon: "https://cdn.simpleicons.org/python/3776AB" },
+      { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
+      { name: "XML / QWeb Views" },
+      { name: "pgAdmin", icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
+      { name: "ERP Module Customization" },
+    ],
+  },
+  {
     title: "Frontend Development",
     iconName: "Layout",
     skills: [

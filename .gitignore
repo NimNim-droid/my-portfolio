@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Private Developer Notes (Ignored by Git - Only for local reading)
+DEVELOPER_GUIDE.md
+docs/

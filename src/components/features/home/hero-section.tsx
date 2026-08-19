@@ -28,12 +28,12 @@ export function HeroSection() {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <a href="#projects" className="w-full sm:w-auto">
+          <Link to="/projects" className="w-full sm:w-auto">
             <Button size="lg" className="w-full sm:w-auto gap-2 rounded-sm px-6 h-12 bg-black dark:bg-white text-white dark:text-neutral-950 hover:bg-neutral-800 dark:hover:bg-neutral-200 shadow-sm">
               View Projects
               <ArrowRight className="w-4 h-4" />
             </Button>
-          </a>
+          </Link>
           
           {/* Let's Talk Button -> Routes to /contact */}
           <Link to="/contact" className="w-full sm:w-auto">

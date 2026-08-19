@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { Section } from "@/components/common/section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -46,9 +47,9 @@ export function SkillsSection() {
             <div className="flex flex-col items-center text-center space-y-2.5">
               <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-neutral-900 dark:border-white p-0.5 shadow-sm bg-neutral-100 dark:bg-neutral-800">
                 <img
-                  src="https://images.unsplash.com/photo-1534972195531-a756b1126f24?w=400&auto=format&fit=crop&q=80"
+                  src="/assets/profile.jpg"
                   alt="Nimrod Camabalon"
-                  className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-300"
+                  className="w-full h-full object-cover object-[78%_20%] rounded-full transition-all duration-300"
                 />
               </div>
               <div className="space-y-0.5">
@@ -79,17 +80,17 @@ export function SkillsSection() {
 
             {/* Action Buttons */}
             <div className="space-y-2 pt-1">
-              <a href="#projects" className="block w-full">
+              <Link to="/projects" className="block w-full">
                 <Button size="sm" className="w-full justify-center gap-1.5 rounded-md bg-black dark:bg-white text-white dark:text-neutral-950 hover:bg-neutral-800 dark:hover:bg-neutral-200 h-9 text-xs shadow-sm">
                   View Projects
                   <ArrowRight className="w-3 h-3" />
                 </Button>
-              </a>
-              <a href="/contact" className="block w-full">
+              </Link>
+              <Link to="/contact" className="block w-full">
                 <Button variant="secondary" size="sm" className="w-full justify-center rounded-md border-neutral-200 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 text-neutral-900 dark:text-white h-9 text-xs">
                   Let's Talk
                 </Button>
-              </a>
+              </Link>
             </div>
 
           </div>

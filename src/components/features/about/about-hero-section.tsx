@@ -19,11 +19,11 @@ export function AboutHeroSection() {
 
         {/* Right photo container */}
         <div className="lg:col-span-5 flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-sm aspect-[4/3] sm:aspect-square rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-sm bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center">
+          <div className="relative w-full max-w-sm aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-md bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80"
+              src="/assets/profile.jpg"
               alt="Nimrod Camabalon"
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              className="w-full h-full object-cover object-[78%_20%] transition-all duration-500 hover:scale-102"
               loading="lazy"
             />
           </div>

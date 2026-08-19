@@ -10,7 +10,7 @@ export function AboutHeroSection() {
             ABOUT ME
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-neutral-950 dark:text-white">
-            Nimrod Camabalon
+            Nimrod Cambalon
           </h1>
           <p className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-300 font-normal leading-relaxed max-w-xl">
             Aspiring Full-Stack Software Developer bridging hardware and software through clean code, creative problem-solving, and innovative solutions.
@@ -22,7 +22,7 @@ export function AboutHeroSection() {
           <div className="relative w-full max-w-sm aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-md bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center">
             <img
               src="/assets/profile.jpg"
-              alt="Nimrod Camabalon"
+              alt="Nimrod Cambalon"
               className="w-full h-full object-cover object-[78%_20%] transition-all duration-500 hover:scale-102"
               loading="lazy"
             />

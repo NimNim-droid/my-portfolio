@@ -12,6 +12,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "traceback-lost-found",
+    title: "TraceBack — Lost & Found Network",
+    category: "WEB APPLICATIONS",
+    description:
+      "Full-stack community-driven lost and found platform featuring real-time incident reporting, automated item matching algorithms, secure claims verification, and direct communication between owners and finders.",
+    image: "/assets/projects/traceback.png",
+    tags: ["React", "Node.js", "Express", "Item Matching", "Claims & Messaging", "Category Search"],
+    liveUrl: "https://traceback-mocha.vercel.app/",
+    featured: true,
+  },
+  {
     id: "lima-yms-byd",
     title: "LIMA Yard Management System (BYD Operations)",
     category: "ODOO & ERP",
@@ -20,7 +31,6 @@ export const projects: Project[] = [
     image: "/assets/projects/lima-yms.png",
     tags: ["Odoo ERP", "Python (ORM)", "PostgreSQL", "VIN Tracking", "5-Point PDI", "Slot Allocation"],
     liveUrl: "https://staging-lima-yms.odoo.com/web/login?redirect=%2Fodoo%3F",
-    githubUrl: "https://github.com/NimNim-droid",
     featured: true,
   },
 ];

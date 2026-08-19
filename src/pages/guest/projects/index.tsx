@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import { Section } from "@/components/common/section";
 import { Badge } from "@/components/ui/badge";
 import { projects, Project } from "@/data/projects";
-import { Search, ArrowUpRight, Code2, ExternalLink } from "lucide-react";
+import { Search, ArrowUpRight, ExternalLink } from "lucide-react";
 
 type FilterCategory = "ALL WORKS" | "WEB APPLICATIONS" | "ODOO & ERP";
 
@@ -157,18 +157,6 @@ export default function ProjectsPage() {
                       >
                         <span>Live Demo</span>
                         <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-                      </a>
-                    )}
-
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white group/btn"
-                      >
-                        <Code2 className="w-3.5 h-3.5" />
-                        <span>Source Code</span>
                       </a>
                     )}
                   </div>

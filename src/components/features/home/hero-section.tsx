@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/common/section";
+import { RotatingText } from "@/components/ui/rotating-text";
 import { ArrowRight, ArrowDown } from "lucide-react";
 
 export function HeroSection() {
@@ -22,10 +23,22 @@ export function HeroSection() {
           Nimrod Cambalon
         </h1>
 
-        {/* 3. Subtitle (Entrance Delay 0.4s) */}
-        <p className="text-xl sm:text-2xl md:text-3xl text-neutral-600 dark:text-neutral-400 font-medium leading-snug max-w-2xl mx-auto hero-animate-3">
-          Full-Stack Software Engineer building precise, scalable digital architectures.
-        </p>
+        {/* 3. Subtitle with Rotating Specialty Pill (Entrance Delay 0.4s) */}
+        <div className="space-y-3 hero-animate-3">
+          <p className="text-lg sm:text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-medium leading-relaxed max-w-2xl mx-auto flex flex-wrap items-center justify-center gap-2">
+            <span>Full-Stack Software Engineer building</span>
+            <RotatingText
+              words={[
+                "Scalable Web Apps",
+                "Robust Odoo ERP Modules",
+                "Clean Digital Architectures",
+                "High-Performance Backends",
+                "Intuitive User Interfaces",
+              ]}
+              interval={2800}
+            />
+          </p>
+        </div>
 
         {/* 4. Action Buttons (Entrance Delay 0.55s) */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 hero-animate-4">

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router";
 import { Header } from "@/components/common/header";
 import { Footer } from "@/components/common/footer";
+import { ScrollProgressBar } from "@/components/common/scroll-progress-bar";
 
 export default function GuestLayout() {
   const location = useLocation();
@@ -26,6 +27,7 @@ export default function GuestLayout() {
 
   return (
     <div className="flex min-h-screen flex-col bg-[#fafafa] dark:bg-[#0c0c0c] text-neutral-900 dark:text-neutral-100">
+      <ScrollProgressBar />
       <Header />
       <main key={location.pathname} className="flex-1 animate-page-enter">
         <Outlet />

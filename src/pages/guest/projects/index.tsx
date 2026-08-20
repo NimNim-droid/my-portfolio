@@ -4,11 +4,12 @@ import { Section } from "@/components/common/section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/common/scroll-reveal";
+import { TiltedCard } from "@/components/ui/tilted-card";
+import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { projects, Project } from "@/data/projects";
 import { 
   ArrowUpRight, 
   Search, 
-  ExternalLink,
   Sparkles,
   ArrowRight
 } from "lucide-react";
@@ -96,7 +97,7 @@ export default function ProjectsPage() {
         </ScrollReveal>
 
         {/* ============================================================ */}
-        {/* 3. 3-COLUMN PROJECTS GRID (With Staggered Scroll Reveal)     */}
+        {/* 3. 3-COLUMN PROJECTS GRID (SpotlightCard + TiltedCard)        */}
         {/* ============================================================ */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pt-4">
           {filteredProjects.length > 0 ? (
@@ -108,25 +109,19 @@ export default function ProjectsPage() {
                 distance={24}
                 className="h-full"
               >
-                <div
-                  className="group relative border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/80 p-5 sm:p-6 space-y-5 rounded-2xl transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] dark:hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.03)] hover:border-neutral-400 dark:hover:border-neutral-600 flex flex-col justify-between h-full"
+                <SpotlightCard
+                  spotlightColor="rgba(16, 185, 129, 0.08)"
+                  className="p-5 sm:p-6 space-y-5 flex flex-col justify-between h-full hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] dark:hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.03)]"
                 >
-                  {/* Screenshot Frame with Zoom and Ambient Lighting */}
-                  <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-800 border border-neutral-200/80 dark:border-neutral-800 shadow-inner">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                      loading="lazy"
-                    />
-                    
-                    {/* Subtle top-right quick link floating indicator */}
-                    {project.liveUrl && (
-                      <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200/80 dark:border-neutral-700 flex items-center justify-center text-neutral-800 dark:text-neutral-200 opacity-0 group-hover:opacity-100 group-hover:scale-100 scale-75 transition-all duration-300 shadow-sm">
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </div>
-                    )}
-                  </div>
+                  {/* React Bits: 3D Perspective TiltedCard Screenshot */}
+                  <TiltedCard
+                    imageSrc={project.image}
+                    altText={project.title}
+                    captionText={project.title}
+                    rotateAmplitude={12}
+                    scaleOnHover={1.03}
+                    showTooltip={true}
+                  />
 
                   {/* Project Details */}
                   <div className="space-y-2.5">
@@ -136,7 +131,7 @@ export default function ProjectsPage() {
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-neutral-950 dark:text-white tracking-tight leading-snug group-hover:text-neutral-800 dark:group-hover:text-neutral-100 transition-colors">
+                    <h3 className="text-lg font-bold text-neutral-950 dark:text-white tracking-tight leading-snug">
                       {project.title}
                     </h3>
 
@@ -152,7 +147,7 @@ export default function ProjectsPage() {
                         <Badge
                           key={tag}
                           variant="default"
-                          className="bg-neutral-100/90 dark:bg-neutral-800/90 group-hover:bg-neutral-200/80 dark:group-hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border-neutral-200 dark:border-neutral-700 text-[10px] px-2.5 py-0.5 font-mono rounded-md transition-colors"
+                          className="bg-neutral-100/90 dark:bg-neutral-800/90 text-neutral-700 dark:text-neutral-300 border-neutral-200 dark:border-neutral-700 text-[10px] px-2.5 py-0.5 font-mono rounded-md"
                         >
                           {tag}
                         </Badge>
@@ -173,7 +168,7 @@ export default function ProjectsPage() {
                       )}
                     </div>
                   </div>
-                </div>
+                </SpotlightCard>
               </ScrollReveal>
             ))
           ) : (

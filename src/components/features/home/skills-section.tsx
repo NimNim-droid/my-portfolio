@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { Section } from "@/components/common/section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { skillCategories, SkillCategory } from "@/data/skills";
 import { experiences, ExperienceItem } from "@/data/experience";
 import { 
@@ -149,9 +150,10 @@ export function SkillsSection() {
               {skillCategories.map((category: SkillCategory) => {
                 const Icon = iconMap[category.iconName] || Code2;
                 return (
-                  <div
+                  <SpotlightCard
                     key={category.title}
-                    className="rounded-2xl border border-neutral-200/90 dark:border-neutral-800/90 bg-white dark:bg-neutral-900/80 p-6 space-y-4 shadow-sm hover:border-neutral-300 dark:hover:border-neutral-700 hover:-translate-y-0.5 transition-all duration-300"
+                    spotlightColor="rgba(16, 185, 129, 0.10)"
+                    className="p-6 space-y-4 shadow-sm hover:border-neutral-300 dark:hover:border-neutral-700 hover:-translate-y-0.5"
                   >
                     <div className="flex items-center gap-3 pb-3 border-b border-neutral-100 dark:border-neutral-800/80">
                       <span className="p-2 rounded-xl bg-neutral-100 dark:bg-neutral-800 border border-neutral-200/60 dark:border-neutral-700/60 text-neutral-900 dark:text-white shadow-2xs">
@@ -183,7 +185,7 @@ export function SkillsSection() {
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </SpotlightCard>
                 );
               })}
             </div>
